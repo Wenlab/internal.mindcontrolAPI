@@ -29,7 +29,7 @@ int main(){
 		MC_API_SetDLPOnOff(sm,k%2);
 
 		if (MC_API_isLaserControllerPresent(sm)== MC_API_TRUE){
-			printf("Laser Controller present! Power is Green %d, Blue %d\n",MC_API_GetGreenLaserPower(sm), MC_API_GetBlueLaserPower(sm) );
+			printf("Laser Controller present! Power is First %d, Second %d\n",MC_API_GetFirstLaserPower(sm), MC_API_GetSecondLaserPower(sm) );
 		} else{
 			printf("Laser Controller is not present.\n");
 		}

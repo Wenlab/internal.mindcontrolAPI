@@ -33,9 +33,9 @@ int main(){
 		printf("\n\n=====================\n");
 		g=k;
 		b=2*k;
-		MC_API_SetGreenLaserPower(sm, g);
-		MC_API_SetBlueLaserPower(sm, b);
-		printf("Setting blue to %d, and green to %d.\n",b,g);
+		MC_API_SetFirstLaserPower(sm, g);
+		MC_API_SetSecondLaserPower(sm, b);
+		printf("Setting the first one to %d, and the second one to %d.\n",b,g);
 		int f=MC_API_GetCurrentFrame(sm);
 		printf("Current frame is %d\n",f);
 		int dlp=MC_API_GetDLPOnOff(sm);

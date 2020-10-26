@@ -127,17 +127,28 @@ int MC_API_UnRegisterLaserController(SharedMemory_handle sm);
  *  Returns MC_API_OK
  *  Returns MC_API_ERROR if error.
  */
-int MC_API_SetGreenLaserPower(SharedMemory_handle sm, int power);
-int MC_API_SetBlueLaserPower(SharedMemory_handle sm, int power);
+int MC_API_SetFirstLaserPower(SharedMemory_handle sm, int power);
+int MC_API_SetSecondLaserPower(SharedMemory_handle sm, int power);
 
 /*
  * Get the laser power. An integer value between 1 and 100
  * Returns MC_API_ERROR if the value cannot be acquired.
  */
-int MC_API_GetGreenLaserPower(SharedMemory_handle sm);
-int MC_API_GetBlueLaserPower(SharedMemory_handle sm);
+int MC_API_GetFirstLaserPower(SharedMemory_handle sm);
+int MC_API_GetSecondLaserPower(SharedMemory_handle sm);
 
+/*
+ * Get the laser name. 1 for blue, 2 for green, 3 for red.
+ * Returns MC_API_ERROR if the value cannot be acquired.
+ */
+int MC_API_GetFirstLaserName(SharedMemory_handle sm);
+int MC_API_GetSecondLaserName(SharedMemory_handle sm);
 
+/*
+ * Set the laser name. 1 for blue, 2 for green, 3 for red.
+ */
+int MC_API_SetFirstLaserName(SharedMemory_handle sm, int name);
+int MC_API_SetSecondLaserName(SharedMemory_handle sm, int name);
 
 /*
  * Set current frame
